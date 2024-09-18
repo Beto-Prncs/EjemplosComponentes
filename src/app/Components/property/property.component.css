@@ -1,0 +1,6 @@
+img {
+  width: 50px;  /* Ajusta el tamaño de la imagen */
+  height: 50px; /* La imagen será cuadrada */
+  border-radius: 50%; /* Esto hace que la imagen sea circular */
+  object-fit: cover;  /* Asegura que la imagen cubra completamente el contenedor */
+  }
