@@ -1,43 +1,44 @@
-<button (click)="alternateVisibility()">back</button>
+<button (click)="alternateVisibility()">Back</button>
 
 <div class="container">
-    <div class="sideMenu" 
+  <div class="sideMenu"
     [style.background]="theme"
     [style.width]="widthMenu+'%'"
-    [style.display]="visibleMenu == true? 'flex' : 'none' "
-    >
-        <div class="profile">
-            <div class="avatar-container">
-               <!-- <app-property></app-property> -->
-            </div>
-            <div class="username">
-            <p>{{userName}}</p>
-            <div class="button-item">
-                <button (click)="alternateVisibility()">back</button>
-            </div>
-        </div>
-        </div>
-        <div class="menu">
-            <div class="menu-item">
-                <a href="#">📅 Dashboard</a>
-            </div>
-            <div class="menu-item">
-                <a href="#">🧑‍🦱 Profile</a>
-            </div>
-        </div>
-        <div class="buttons">
-            <div class="button-item">
-                <button (click)="setTheme('red')">Change Color</button>
-            </div>
-            <div class="button-item">
-                <button (click)="setSize()">Change Size</button>
-            </div>
-        </div>
-    </div>
-    <div class="content">
-        <h1></h1>
-    </div>
+    [style.display]="visibleMenu ? 'flex' : 'none'">
     
+    <div class="profile">
+      <div class="avatar-container">
+        <img [src]="https://pbs.twimg.com/media/EXht2tAUwAARS2s.jpg">
+      </div>
+      <div class="username">
+        <p>{{userName}}</p>
+        <div class="button-item">
+          <button (click)="alternateVisibility()">Back</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu">
+      <div class="menu-item">
+        <a href="#">📅 Dashboard</a>
+      </div>
+      <div class="menu-item">
+        <a href="#">🧑‍🦱 Profile</a>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <div class="button-item">
+        <!-- No se necesita pasar 'red' ya que ahora alterna automáticamente -->
+        <button (click)="setTheme()">Change Color</button>
+      </div>
+      <div class="button-item">
+        <button (click)="setSize()">Change Size</button>
+      </div>
+    </div>
   </div>
-  
-  
+
+  <div class="content">
+    <h1></h1>
+  </div>
+</div>
